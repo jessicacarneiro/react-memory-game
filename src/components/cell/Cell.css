@@ -1,0 +1,12 @@
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #DCDCDC;
+    display: inline-block;
+    margin: 0px 3px 1px 1px;
+    border: 1px solid #dcdcdd;
+}
+
+.cellId {
+    display: none;
+}
