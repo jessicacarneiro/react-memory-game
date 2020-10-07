@@ -1,7 +1,12 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { mount } from 'enzyme';
+
 import App from './App';
 
-test('should render grid container', () => {
-  
-});
+describe('<App />', () => {
+    it('should render App', () => {
+        const wrapper = mount(<App />);
+
+        expect(wrapper.exists()).toBe(true);
+    });
+})
