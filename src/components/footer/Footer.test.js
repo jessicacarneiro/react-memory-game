@@ -15,4 +15,10 @@ describe('<Footer />', () => {
 
         expect(wrapper.instance().props.hints).toBeDefined();
     });
+
+    it('should render with message "Memorize..." when state memorize is passed', () => {
+        const wrapper = mount(<Footer gameState={'memorize'}/>);
+
+        expect(wrapper.find('.hint').text()).toBe('Memorize...');
+    });
 })
