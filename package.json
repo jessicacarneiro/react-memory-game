@@ -14,7 +14,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "husky install",
+    "lint": "eslint src/*.js src/**/*.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,6 +35,7 @@
   },
   "devDependencies": {
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.3"
+    "enzyme-adapter-react-16": "^1.15.3",
+    "husky": "^5.0.0-beta.0"
   }
 }
