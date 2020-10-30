@@ -21,5 +21,11 @@ describe('<Grid />', () => {
         expect(grid.queryByText('row-10')).toBeInTheDocument();
         expect(grid.queryByText('row-11')).toBeInTheDocument();
         expect(grid.queryByText('row-12')).toBeInTheDocument();
-    })
+    });
+
+    it('should store active cells', () => {
+        const wrapper = mount(<Grid rows={3} columns={4} activeCellsCount={2} />);
+
+        expect(wrapper.instance().activeCells).toHaveLength(2);
+    });
 })

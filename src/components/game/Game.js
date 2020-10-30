@@ -17,7 +17,7 @@ class Game extends React.Component {
     render() {
         return (
             <div>
-                <Grid rows={this.props.rows} columns={this.props.columns} />
+                <Grid rows={this.props.rows} columns={this.props.columns} activeCellsCount={this.props.activeCellsCount} />
                 <Footer {...this.state} />
             </div>
         );
