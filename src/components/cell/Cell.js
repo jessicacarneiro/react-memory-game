@@ -6,15 +6,18 @@ class Cell extends React.Component {
         super(props);
 
         this.id = props.id;
-        this.active = this.isCellActive(this.id, this.props.activeCells);
+        this.active = props.active;
     }
 
-    isCellActive(cellId, activeCells) {
-        return activeCells.includes(cellId);
+    isCellActive() {
+        return this.active && this.props.gameState === "memorize";
     }
 
     render() {
-        return <div className="cell">
+        let className = "cell";
+        className += this.isCellActive() ? "-active" : "";
+
+        return <div className={className}>
             <span className="cellId">
                     {`row-${this.id}`}
             </span>
